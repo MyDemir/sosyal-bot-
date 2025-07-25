@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosyal Medya Akışı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="#" class="site-title">Sosyal Bot</a>
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <aside id="sidebar" class="sidebar">
+            <h2 class="sidebar-title">Sosyal Bot</h2>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <button class="sidebar-button active" data-category="all">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                            </svg>
+                            Tümü
+                        </button>
+                    </li>
+                    <li>
+                        <button class="sidebar-button" data-category="twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                            Twitter (X)
+                        </button>
+                    </li>
+                    <li>
+                        <button class="sidebar-button" data-category="telegram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                            Telegram
+                        </button>
+                    </li>
+                    <li>
+                        <button class="sidebar-button" data-category="youtube">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2A29 29 0 0 0 12 2.15a29 29 0 0 0-8.6.27 2.78 2.78 0 0 0-1.94 2C.9 8.2 1 12 2 15.6a2.78 2.78 0 0 0 1.94 2 29 29 0 0 0 8.6.27 29 29 0 0 0 8.6-.27 2.78 2.78 0 0 0 1.94-2c1.04-3.8 1-7.6-.06-9.18z"></path>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                            YouTube
+                        </button>
+                    </li>
+                    <li>
+                        <button class="sidebar-button" data-category="discord">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M8 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.105A9.764 9.764 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            Discord
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="profile-button" class="sidebar-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.06 0 1.65 1.65 0 0 0-.33 1.82l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.06 0 1.65 1.65 0 0 0-.33 1.82l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.06 0 1.65 1.65 0 0 0-.33 1.82l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.06 0 1.65 1.65 0 0 0-.33 1.82l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.06 0"></path>
+                    </svg>
+                    Profil / Ayarlar
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h1 id="main-title" class="content-title">En Son Güncellemeler (Tümü)</h1>
+
+            <div id="timeline-container" class="timeline-container">
+                <div class="timeline-item timeline-category twitter all-content">
+                    <div class="timeline-circle"></div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <img src="https://via.placeholder.com/40/1da1f2/ffffff?text=X" alt="Twitter Profil" class="profile-img">
+                            <div>
+                                <p class="card-title">Twitter Kullanıcısı</p>
+                                <p class="card-meta">25 Temmuz 2025, 15:00 - Twitter</p>
+                            </div>
+                        </div>
+                        <p class="card-body">
+                            Yeni bir tweet atıldı: "Bugün hava çok güzel! Herkese iyi bir gün dilerim. #hava #mutluluk"
+                        </p>
+                        <a href="#" class="card-link">Gönderiyi Görüntüle</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-category telegram all-content">
+                    <div class="timeline-circle"></div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <img src="https://via.placeholder.com/40/0088cc/ffffff?text=T" alt="Telegram Kanalı" class="profile-img">
+                            <div>
+                                <p class="card-title">Telegram Kanalı</p>
+                                <p class="card-meta">25 Temmuz 2025, 14:45 - Telegram</p>
+                            </div>
+                        </div>
+                        <p class="card-body">
+                            Yeni bir mesaj: "Önemli duyuru! Yeni sürümümüz yolda, bizi takipte kalın."
+                        </p>
+                        <a href="#" class="card-link">Mesajı Görüntüle</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-category youtube all-content">
+                    <div class="timeline-circle"></div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <img src="https://via.placeholder.com/40/ff0000/ffffff?text=Y" alt="YouTube Kanalı" class="profile-img">
+                            <div>
+                                <p class="card-title">YouTube Kanalı</p>
+                                <p class="card-meta">25 Temmuz 2025, 14:30 - YouTube</p>
+                            </div>
+                        </div>
+                        <p class="card-body">
+                            Yeni bir video yayınlandı: "En Son Kodlama Trendleri 2025"
+                        </p>
+                        <a href="#" class="card-link">Videoyu İzle</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-category discord all-content">
+                    <div class="timeline-circle"></div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <img src="https://via.placeholder.com/40/7289da/ffffff?text=D" alt="Discord Sunucusu" class="profile-img">
+                            <div>
+                                <p class="card-title">Discord Kanalı</p>
+                                <p class="card-meta">25 Temmuz 2025, 14:15 - Discord</p>
+                            </div>
+                        </div>
+                        <p class="card-body">
+                            Yeni bir duyuru yapıldı: "Sunucumuza hoş geldiniz! Kurallar için #kurallar kanalına bakmayı unutmayın."
+                        </p>
+                        <a href="#" class="card-link">Mesajı Görüntüle</a>
+                    </div>
+                </div>
+
+                 <div class="timeline-item timeline-category twitter all-content">
+                    <div class="timeline-circle"></div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <img src="https://via.placeholder.com/40/1da1f2/ffffff?text=X" alt="Twitter Profil" class="profile-img">
+                            <div>
+                                <p class="card-title">Twitter Kullanıcısı 2</p>
+                                <p class="card-meta">25 Temmuz 2025, 13:50 - Twitter</p>
+                            </div>
+                        </div>
+                        <p class="card-body">
+                            "Yapay zeka teknolojilerindeki son gelişmeler gerçekten heyecan verici! #AI #Teknoloji"
+                        </p>
+                        <a href="#" class="card-link">Gönderiyi Görüntüle</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-modal" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <button id="close-modal-button" class="close-modal-button">&times;</button>
+                    <h2 class="modal-title">Profil ve API Ayarları</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="twitter-api-key">Twitter API Anahtarı:</label>
+                            <input type="text" id="twitter-api-key" placeholder="Twitter API Anahtarınızı girin">
+                        </div>
+                        <div class="form-group">
+                            <label for="telegram-token">Telegram Bot Token:</label>
+                            <input type="text" id="telegram-token" placeholder="Telegram Bot Tokeninizi girin">
+                        </div>
+                        <div class="form-group">
+                            <label for="youtube-api-key">YouTube API Anahtarı:</label>
+                            <input type="text" id="youtube-api-key" placeholder="YouTube API Anahtarınızı girin">
+                        </div>
+                        <div class="form-group">
+                            <label for="discord-bot-token">Discord Bot Token:</label>
+                            <input type="text" id="discord-bot-token" placeholder="Discord Bot Tokeninizi girin">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-button">
+                                Ayarları Kaydet
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Sosyal Bot. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                              </html>
+                              
